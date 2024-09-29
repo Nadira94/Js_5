@@ -1,0 +1,90 @@
+/* common css starts */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  h1,h2,h3,h4,h5,h6,ul,ol,p{
+    margin: 0;
+    padding: 0;
+  }
+  a {
+    text-decoration: none;
+  }
+
+  ul,ol{
+    list-style: none;
+}
+
+/* common css end */
+
+/* navbar starts */
+nav{
+    background-color: #555;
+    padding: 10px 0;
+}
+nav .sidebarBtn{
+    width: 40px;
+    height: 40px;
+    border: none;
+    color: white;
+    background-color: #00000079;
+    border-radius: 10px 10px;
+}
+.sidebar{
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+}
+.sidebarCnt{
+    width: 80%;
+    background-color: #fff;
+    height: 100vh;
+    overflow-y: auto;
+    max-width: 350px;
+    position: relative;
+    padding: 30px 20px;
+    transition: 0.5s ease;
+    transform: translateX(-100%);
+
+}
+.sidebarLogo{
+    width: 250px;
+    text-align: center;
+    margin: auto;
+
+}
+.sidebarLogo img{
+    width: 100%;
+}
+.sidebarCnt ul{
+    text-align: center;
+    margin-top: 30px;
+}
+
+.sidebarCnt ul a{
+    color: #000;
+    margin-bottom: 15px;
+    display: block;
+}
+.sidebarCnt .cancel{
+    position: absolute;
+    top: 30px;
+    color: red;
+    right: 20px;
+    cursor: pointer;
+}
+
+.sidebar.active{
+    opacity: 1;
+    visibility: visible;
+}
+
+.sidebar.active .sidebarCnt{
+    transform: translateX(0%);
+}
+/* navbar end */
